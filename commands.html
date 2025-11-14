@@ -11,11 +11,6 @@
         padding: 20px;
     }
 
-    h2 {
-        font-weight: 600;
-        color: #333;
-    }
-
     .code-container {
         position: relative;
         background: #eef2f5;
@@ -25,7 +20,6 @@
         overflow-x: auto;
         font-family: "Courier New", monospace;
         font-size: 14px;
-        white-space: nowrap;
         width: 100%;
         box-sizing: border-box;
     }
@@ -42,18 +36,16 @@
         border-radius: 4px;
         cursor: pointer;
     }
-    .copy-btn:active {
-        background: #0056b3;
-    }
 </style>
 </head>
 
 <body>
 
-<h2>Docker Database Commands</h2>
+<h2>Docker DB Commands</h2>
 
 <div class="code-container">
     <button class="copy-btn" onclick="copyCode()">Copy</button>
+
 <pre id="code">
 docker exec $(docker ps -q -f name=studentvolunteer_db) psql -U admin -d student_volunteer -c "SELECT * FROM Users WHERE UserID = 99999;"
 
