@@ -54,7 +54,7 @@
 
 <div class="code-container">
     <button class="copy-btn" onclick="copyCode()">Copy</button>
-    <span id="code">
+<pre id="code">
 docker exec $(docker ps -q -f name=studentvolunteer_db) psql -U admin -d student_volunteer -c "SELECT * FROM Users WHERE UserID = 99999;"
 
 docker exec $(docker ps -q -f name=studentvolunteer_db) psql -U admin -d student_volunteer -c "INSERT INTO Users (UserID, Type, Email, PasswordHash) VALUES (99999, 'TEST','test@test.test',  'Persistence Check');"
@@ -66,7 +66,8 @@ docker service ps studentvolunteer_db
 docker exec $(docker ps -q -f name=studentvolunteer_db) psql -U admin -d student_volunteer -c "SELECT * FROM users WHERE userid = 99999;"
 
 docker exec $(docker ps -q -f name=studentvolunteer_db) psql -U admin -d student_volunteer -c "DELETE FROM Users WHERE UserID = 99999;"
-    </span>
+</pre>
+
 </div>
 
 <script>
